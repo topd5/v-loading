@@ -1,0 +1,63 @@
+:root {
+  --v-l-loader-z-index: 1000;
+  --v-l-loader-background-color: rgba(125, 125, 125, 0.5);
+  --v-l-loader-content-animation-duration: 1.5s;
+  --v-l-loader-content-animation-name: v-l-rotate;
+  --v-l-loader-content-scale: 1.0;
+  --v-l-spinner-color: white;
+  --v-l-circle-stroke-width: 3.0;
+  --v-l-circle-dash-array: 80 1000;
+}
+
+.v-l-pos-rel {
+  position: relative !important;
+}
+
+.v-l-center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.v-l-loader {
+  background-color: var(--v-l-loader-background-color);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: var(--v-l-loader-z-index);
+  user-select: none;
+  overflow: hidden;
+}
+
+.v-l-spinner {
+  color: var(--v-l-spinner-color);
+}
+
+.v-l-scale {
+  transform: scale(var(--v-l-loader-content-scale));
+}
+
+.v-l-rotating {
+  animation:
+    var(--v-l-loader-content-animation-name)
+    var(--v-l-loader-content-animation-duration)
+    infinite
+    linear;
+}
+
+.v-l-circle {
+  stroke-width: var(--v-l-circle-stroke-width);
+  stroke-dasharray: var(--v-l-circle-dash-array);
+}
+
+@keyframes v-l-rotate { 
+  0% { 
+    transform: rotate(0deg); 
+  } 
+
+  100% { 
+    transform: rotate(360deg); 
+  } 
+}

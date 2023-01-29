@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Dmitriy Zhuravlev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topd5/v-loading"
+  },
+  "license" : "MIT",
+  "description": "v-loading directive for Vue 3 apps",
+  "main": "v-loading.js",
+  "name": "@topd5/v-loading",
+  "exports": {
+    ".": {
+      "types": "./v-loading.d.ts",
+      "import": "./v-loading.js"
+    },
+    "./v-loading.css": "./v-loading.css"
+  },
+  "version": "1.0.0"
+}
